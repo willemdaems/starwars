@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: starwars-nginx-service
+  labels:
+    name: starwars-nginx-service
+    app: starwars-app
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30004
+  selector:
+    name: starwars-nginx
+    app: starwars-app

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: starwars-nginx
+  labels:
+    name: starwars-nginx
+    app: starwars-app
+spec:
+  containers:
+    - name: starwars-nginx
+      image: willemdaems/starwars-nginx:1.0.1
+      ports:
+        - containerPort: 80
